@@ -1,0 +1,11 @@
+.todo-app .attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 20px;
+}
+.todo-app.dark .attribution {
+  color: hsl(234, 39%, 85%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

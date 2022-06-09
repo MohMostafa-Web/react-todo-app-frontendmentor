@@ -1,0 +1,79 @@
+.todo-app .input-field {
+  position: relative;
+}
+.todo-app .input-field::before {
+  content: "Currently typing ";
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  left: 60px;
+  display: none;
+}
+@media (max-width: 575px) {
+  .todo-app .input-field::before {
+    font-size: 12px;
+    left: 50px;
+  }
+}
+.todo-app .input-field.focused::before {
+  display: block;
+}
+/* light mode */
+.todo-app.light .input-field::before {
+  color: var(--lt-very-dark-grayish-blue);
+}
+/* dark mode */
+.todo-app.dark .input-field::before {
+  color: var(--dt-light-grayish-blue);
+}
+.todo-app .input-field input {
+  width: 100%;
+  color: var(--lt-dark-grayish-blue);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  padding: 22px 0 20px 60px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  caret-color: var(--primary-bright-blue);
+}
+@media (max-width: 575px) {
+  .todo-app .input-field input {
+    font-size: 12px;
+    padding-left: 50px;
+  }
+}
+.todo-app .input-field input:focus {
+  padding-left: 198px;
+}
+@media (max-width: 575px) {
+  .todo-app .input-field input:focus {
+    padding-left: 142px;
+  }
+}
+/* light mode */
+.todo-app.light .input-field input:focus {
+  color: var(--lt-very-dark-grayish-blue);
+}
+/* dark mode */
+.todo-app.dark .input-field input:focus {
+  color: var(--dt-light-grayish-blue);
+}
+/* light mode */
+.todo-app.light .input-field input {
+  background-color: var(--lt-very-light-gray);
+}
+/* dark mode */
+.todo-app.dark .input-field input {
+  background-color: var(--dt-very-dark-desaturated-blue);
+}

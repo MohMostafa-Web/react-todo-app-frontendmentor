@@ -27,7 +27,7 @@ const InputField = ({ list, setList }) => {
   
   /* Create function to handle Keyup when user presses "Enter" */
   const handleKeyup = (e) => {
-    console.log(e);
+    // console.log(e); // debug
     if (e.key === "Enter") {
       addTodo();
     }

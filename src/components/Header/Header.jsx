@@ -11,7 +11,7 @@ const Header = ({ mode, setMode }) => {
 
   return (
     <header>
-      <div className="logo">todo</div>
+      <h1 className="logo">todo</h1>
       <img
         className={mode === "dark" ? "available" : undefined}
         src={SunIcon}
